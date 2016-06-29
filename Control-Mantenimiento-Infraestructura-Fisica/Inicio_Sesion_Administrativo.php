@@ -53,7 +53,7 @@ if(isset($_SESSION['Nick_Administrativo'])){
 					</div>	
 				
                 	<form  method="post" action="" style="position: absolute; left: 410px; top: 320px;">
-  						<h1>Inicio de sesión para VICERRECTOR ADMINISTRATIVO</h1>
+  						<h1>Inicio de sesión para VICERECTOR ADMINISTRATIVO</h1>
   						<div class="inset">
 							<p>
     							<label for="usuario">Usuario</label>
@@ -67,7 +67,7 @@ if(isset($_SESSION['Nick_Administrativo'])){
   				       
                           </div>             
                           <p class="p-container">
-							<input type="submit" name="login_c" id="go" value="Iniciar Sesión"></input>
+							<input type="submit" name="login" id="go" value="Iniciar Sesión"></input>
     						<input type="submit" name="Contrasena_A" id="go" value="Cambiar Contrasseña"></input>
   						  </p>							
                             </form>

@@ -5,7 +5,7 @@ include 'ConexionBD.php';
 	echo "";
 	}
 	else {
-		echo '<script> window.location="Inicio_Sesion_Estudiantes.php"; </script>';
+		echo '<script> window.location="Inicio_Sesion_Docentes.php"; </script>';
 	}
 ?>
 
@@ -36,13 +36,13 @@ $fecha = $_POST['Fecha_Solicitud'];
 $tipo = $_POST['cbxTipo_Mantenimiento'];
 $sitio = $_POST['cbxSitio_Dano'];
 $info = $_POST['Infomacion'];
-$id_e = $_SESSION['Id_Usuario'];
+$id = $_SESSION['Id_Usuario'];
 //0btiene la longitud de un string
 $req = (strlen($fecha)*strlen($tipo)*strlen($sitio)*strlen($info)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Enviar_Formato_Solicitud.php"</script>');
 
 //Ingresamos la info a la base de datos
 
-mysql_query("INSERT INTO solicitud VALUES ('','$fecha','$tipo','$sitio','$info',1,'$id_e')",$link) or die('"<script> alert("'.mysql_error().'")</script>" "<script> window.location="Enviar_Formato_Solicitud_Estudiantes.php"</script>');
+mysql_query("INSERT INTO solicitud VALUES ('','$fecha','$tipo','$sitio','$info',1,'$id')",$link) or die('"<script> alert("'.mysql_error().'")</script>" "<script> window.location="Enviar_Formato_Solicitud_Estudiantes.php"</script>');
 
 echo '<script> alert("Solicitud Registrada");</script>';
 echo '<script> window.location="Pagina_Principal_Estudiantes.php"; </script>';
