@@ -120,12 +120,12 @@ include 'ConexionBD.php';
                                 
                                 <p> 
                                     <label for="inputObservacion" class="sr-only">Información detallada del daño</label>
-									<textarea id="informacion" name="Infomacion" placeholder="Escriba aqui detalladamente la solicitud, identifique claramente el lugar y la labor de mantenimiento a realizar (Máximo 250 caracteres)" cols="60" rows="6" required="" maxlength="20"></textarea>	
+									<textarea id="informacion" name="Infomacion" placeholder="Escriba aqui detalladamente la solicitud, identifique claramente el lugar y la labor de mantenimiento a realizar (Máximo 250 caracteres)" cols="60" rows="6" required="" maxlength="250"></textarea>	
                                 </p>
                               </div>             
                           
                           <p class="p-container">
-    						<input type="submit" name="login" id="go" value="Registrar Contratista"></input>
+    						<input type="submit" name="login" id="go" value="Enviar Solicitud"></input>
   						  </p>							
                             </form>
                         </div>
