@@ -1,0 +1,88 @@
+/**
+ * @version    SVN: <svn_id>
+ * @package    PdfEmbed
+ * @author     Techjoomla <extensions@techjoomla.com>
+ * @copyright  Copyright (c) 2009-2015 TechJoomla. All rights reserved.
+ * @license    GNU General Public License version 2, or later
+ */
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*primer ejemplo*/
+
+#breadcrumbs-one{
+  background: #8C0404; /**140,4,4 en hexadecimal*/
+  border-width: 1px;
+  border-style: solid;
+  border-color: #8C0404; /**140,4,4 en hexadecimal*/
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0,0,0,.2);
+  overflow: hidden;
+  width: 123%;
+  position: absolute;
+}
+
+#breadcrumbs-one li{
+  float: left;
+}
+
+#breadcrumbs-one a{
+  padding: .7em 1em .7em 2em;
+  float: left;
+  text-decoration: none;
+  color: #FFFFFF; /**Color letra ruta de miga*/
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  background-color: #CE161C;
+  background-image: linear-gradient(to right, #EE1C25, #EE1C25);
+}
+
+#breadcrumbs-one li:first-child a{
+  padding-left: 1em;
+  border-radius: 5px 0 0 5px;
+}
+
+#breadcrumbs-one a:hover{
+  background: #303192; /**Sombra*/
+}
+
+#breadcrumbs-one a::after,
+#breadcrumbs-one a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid;
+  right: -1em;
+}
+
+#breadcrumbs-one a::after{
+  z-index: 2;
+  border-left-color: #EE1C25; /**Color flecha*/
+}
+
+#breadcrumbs-one a::before{
+  border-left-color: #8C0404; /**Color borde*/
+  right: -1.1em;
+  z-index: 1;
+}
+
+#breadcrumbs-one a:hover::after{
+  border-left-color: #303192; /**Color sombra flecha*/
+}
+
+#breadcrumbs-one .current,
+#breadcrumbs-one .current:hover{
+  font-weight: bold;
+  background: none;
+}
+
+#breadcrumbs-one .current::after,
+#breadcrumbs-one .current::before{
+  content: normal;
+}
