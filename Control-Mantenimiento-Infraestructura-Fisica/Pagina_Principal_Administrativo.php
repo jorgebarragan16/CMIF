@@ -95,12 +95,12 @@ include 'ConexionBD.php';
 					<img src="./Control_Mantenimiento_Infraestructura_files/Img/Copia_Seguridad.png" style="position: absolute; left: 1px; top: 540px;" width="250" height="80" alt= "Descargar Copia de seguridad" title="Click para descargar copia de seguridad de la base de datos (Backup)"></img>
 					</a>
 						
-					<a href="Restaurar_Copia_Seguridad.php">
+					<!-- <a href="Restaurar_Copia_Seguridad.php">
 					<img src="./Control_Mantenimiento_Infraestructura_files/Img/Subir_Copia_Seguridad.png" style="position: absolute; left: 365px; top: 540px;" width="250" height="80" alt="Subir Copia de seguridad" title="Click para importar la copia de seguridad de la base de datos (Restore)"></img>
-					</a>
+					</a> -->
 						
 					<a href="Salir.php" onclick="return confirm('Seguro que quiere cerrar sesión?')">
-					<img src="./Control_Mantenimiento_Infraestructura_files/Img/Cerrar_Sesion.png" style="position: absolute; left: 735px; top: 570px;" width="250" height="50" alt="Cerrar Sesion" title="Click para finalizar la sesión"></img>
+					<img src="./Control_Mantenimiento_Infraestructura_files/Img/Cerrar_Sesion.png" style="position: absolute; left: 365px; top: 570px;" width="250" height="50" alt="Cerrar Sesion" title="Click para finalizar la sesión"></img>
 					</a>
   				</div>
  		 		
