@@ -68,7 +68,7 @@ if(isset($_SESSION['Nick_Administrativo'])){
                           </div>             
                           <p class="p-container">
 							<input type="submit" name="login" id="go" value="Iniciar Sesión"></input>
-    						<input type="submit" name="Contrasena_A" id="go" value="Cambiar Contrasseña"></input>
+    						<input type="submit" name="Contrasena_A" id="go" value="Cambiar Contraseña"></input>
   						  </p>							
                             </form>
                         </div>

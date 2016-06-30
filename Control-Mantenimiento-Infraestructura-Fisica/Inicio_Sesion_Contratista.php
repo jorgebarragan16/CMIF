@@ -64,7 +64,7 @@ if(isset($_SESSION['Nick_Contratista'])){
                           </div>             
                           <p class="p-container">
     						<input type="submit" name="login_c" id="go" value="Iniciar Sesión"></input>
-    						<input type="submit" name="Contrasena_C" id="go" value="Cambiar Contrasseña"></input>
+    						<input type="submit" name="Contrasena_C" id="go" value="Cambiar Contraseña"></input>
   						  </p>							
                             </form>
                         </div>
