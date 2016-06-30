@@ -75,7 +75,7 @@ include 'ConexionBD.php';
 						</a>
 					</div>	
 								
-                            <form  method="post" action="Validar_Solicitud_Administrativo.php" style="position: absolute; left: 410px; top: 320px;"> 
+                            <form  method="post" action="Validar_Solicitud_Funcionarios.php" style="position: absolute; left: 410px; top: 320px;"> 
                                 <h1> Formato De Solicitud FUNCIONARIOS ADMINISTRATIVOS</h1>
                                 <div class="inset"> 
 	                                <p> 
