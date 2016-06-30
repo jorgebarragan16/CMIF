@@ -38,7 +38,7 @@ $sitio = $_POST['cbxSitio_Dano'];
 $info = $_POST['Infomacion'];
 $id_e = $_SESSION['Id_Usuario'];
 //0btiene la longitud de un string
-$req = (strlen($fecha)*strlen($tipo)*strlen($sitio)*strlen($info)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Enviar_Formato_Solicitud.php"</script>');
+$req = (strlen($fecha)*strlen($tipo)*strlen($sitio)*strlen($info)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Enviar_Formato_Solicitud_Estudiantes.php"</script>');
 
 //Ingresamos la info a la base de datos
 
