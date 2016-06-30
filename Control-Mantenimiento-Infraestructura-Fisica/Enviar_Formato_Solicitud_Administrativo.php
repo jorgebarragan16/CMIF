@@ -55,11 +55,11 @@ include 'ConexionBD.php';
     					<legend>
     					<br></br>
     					<?php
-    					if ((isset($_SESSION['Nick_Usuario'])) && ($_SESSION['Nick_Usuario'] != ""))
+    					if ((isset($_SESSION['Nick_Administrativo'])) && ($_SESSION['Nick_Administrativo'] != ""))
     					{
-    						$Nombre = $_SESSION['Nombres_Usuario']; 
-    						$Apellido1 = $_SESSION['Primer_Apellido_Usuario'];
-    						$Apellido2 = $_SESSION['Segundo_Apellido_Usuario'];
+    						$Nombre = $_SESSION['Nombres_Administrativo']; 
+    						$Apellido1 = $_SESSION['Primer_Apellido_Administrativo'];
+    						$Apellido2 = $_SESSION['Segundo_Apellido_Administrativo'];
     						echo "Bienvenido (a): ". $Nombre . " ". $Apellido1 . " " . $Apellido2;
 	    				}
     					else
@@ -71,7 +71,7 @@ include 'ConexionBD.php';
 					
 					<div>
 						<img src="./Control_Mantenimiento_Infraestructura_files/Img/Cmif_2.png" style="position: absolute; left: 0px; top: 350px;" alt="Logo2" title="Logo CMIF2"></img>
-						<a href="Pagina_Principal_Administrativo.php">
+						<a href="Menu_Solicitudes.php">
 						<img src="./Control_Mantenimiento_Infraestructura_files/Img/Volver.png" style="position: absolute; left: 35px; top: 610px;" width="250" height="80" alt="Volver" title="Click para regresar a la página anterior"></img>
 						</a>
 					</div>	
@@ -114,6 +114,7 @@ include 'ConexionBD.php';
 											<option value="Parqueadero">09. Parqueadero</option>
 											<option value="Pasillos">10. Pasillos</option>
 											<option value="Gimnasio">11. Gimnasio</option>
+											<option value="Otro">12. Otro</option>
 										</select>
 										<br></br>
                                 </p>
@@ -125,7 +126,7 @@ include 'ConexionBD.php';
                               </div>             
                           
                           <p class="p-container">
-    						<input type="submit" name="login" id="go" value="Enviar Solicitud"></input>
+    						<input type="submit" name="login" id="go" value="Enviar Solicitud" onclick="return confirm('Seguro que quiere enviar la información?')"></input>
   						  </p>							
                             </form>
                         </div>

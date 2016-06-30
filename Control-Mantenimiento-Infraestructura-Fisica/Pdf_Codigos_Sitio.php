@@ -85,6 +85,12 @@ $htmlTable='<table>
 <td>11</td>		
 <td>Gimnasio</td>
 </tr>
+
+<tr>
+<td>12</td>
+<td>12</td>		
+<td>Otro</td>
+</tr>
 </table>';
 
 $pdf=new PDF_HTML_Table();

@@ -45,7 +45,7 @@ $req = (strlen($fecha)*strlen($tipo)*strlen($sitio)*strlen($info)) or die('"<scr
 mysql_query("INSERT INTO solicitud VALUES ('','$fecha','$tipo','$sitio','$info',1,'$id_a')",$link) or die('"<script> alert("'.mysql_error().'")</script>" "<script> window.location="Enviar_Formato_Solicitud_Administrativo.php"</script>');
 
 echo '<script> alert("Solicitud Registrada");</script>';
-echo '<script> window.location="Pagina_Principal_Administrativo.php"; </script>';
+echo '<script> window.location="Menu_Solicitudes.php"; </script>';
 ?>
 </body>
 </html>

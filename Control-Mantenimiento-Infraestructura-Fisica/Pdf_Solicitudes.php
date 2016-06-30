@@ -11,9 +11,10 @@ include 'ConexionBD.php';
 
 	$perfil = $_SESSION['Nick_Administrativo'];
 
+
 require 'fpdf17/HtmlTable.php';
 
-$result = mysql_query ( "SELECT Id_Solicitud, Fecha_Solicitud, Tipo_Mantenimiento, Sitio_Dano, Informacion_Solicitud, Nombres_Administrativo, Primer_Apellido_Administrativo, Segundo_Apellido_Administrativo, Nombres_Usuario, Primer_Apellido_Usuario, Segundo_Apellido_Usuario FROM solicitud, administrativo, usuario WHERE solicitud.Administrativo_Id_Administrativo = administrativo.Id_Administrativo AND solicitud.Usuario_Id_Usuario = usuario.Id_Usuario", $link );
+$result = mysql_query ( "SELECT Id_Solicitud, Fecha_Solicitud, Tipo_Mantenimiento, Sitio_Dano, Informacion_Solicitud, Nombres_Administrativo, Primer_Apellido_Administrativo, Segundo_Apellido_Administrativo, Id_Usuario FROM solicitud, administrativo WHERE solicitud.Administrativo_Id_Administrativo = administrativo.Id_Administrativo", $link );
 
 $htmlTable='<table>
 <tr>
@@ -23,7 +24,7 @@ $htmlTable='<table>
 <td>Sitio Del Daño</td>
 <td>Información De La Solicitud</td>
 <td>Nombre Del Administrativo</td>
-<td>Nombre Del Usuario</td>
+<td>Id Del Usuario</td>
 </tr>';
 
 while ($datos = mysql_fetch_array($result)){
@@ -34,7 +35,7 @@ while ($datos = mysql_fetch_array($result)){
 				<td>{$datos[3]}</td>
 				<td>{$datos[4]}</td>
 				<td>{$datos[5]} {$datos[6]} {$datos[7]}</td>
-				<td>{$datos[8]} {$datos[9]} {$datos[10]}</td>				
+				<td>{$datos[8]}</td>				
 				</tr>
 ";
 }

@@ -41,7 +41,7 @@ $contratista = $_POST['Contratista'];
 //$id_solicitud = $_POST['Id_Solicitud'];
 //$id_contratista = $_POST['Id_Contratista'];
 //0btiene la longitud de un string
-$req = (strlen($observaciones)*strlen($solicitud)*strlen($contratista)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Realizar_Asignacion.php"</script>');
+$req = (strlen($observaciones)*strlen($solicitud)*strlen($contratista)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Asignaciones_De_Trabajo.php"</script>');
 
 $data = mysql_query("SELECT Usuario_Id_Usuario FROM solicitud  WHERE Id_Solicitud = $solicitud LIMIT 1", $link);
 $result = mysql_fetch_object($data);

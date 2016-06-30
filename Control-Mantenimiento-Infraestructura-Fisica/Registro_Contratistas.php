@@ -102,6 +102,7 @@ include 'ConexionBD.php';
 											<option value="CC">02. Cedúla De Ciudadanía</option>
 											<option value="CE">03. Cedúla Extranjera</option>
 										</select>
+										<br></br>
 				  				</p>
 				  				
 				  				<p> 
@@ -152,7 +153,7 @@ include 'ConexionBD.php';
                         </div>
                  </div>
 				<div>
-					<img src="./Control_Mantenimiento_Infraestructura_files/Img/Copyright.png" style="position: absolute; left: 90px; top: 1220px;"></img>
+					<img src="./Control_Mantenimiento_Infraestructura_files/Img/Copyright.png" style="position: absolute; left: 90px; top: 1230px;"></img>
 				</div>
 </body>
 </html>

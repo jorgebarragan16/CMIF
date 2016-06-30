@@ -113,6 +113,7 @@ include 'ConexionBD.php';
 											<option value="Parqueadero">09. Parqueadero</option>
 											<option value="Pasillos">10. Pasillos</option>
 											<option value="Gimnasio">11. Gimnasio</option>
+											<option value="Otro">12. Otro</option>
 										</select>
 										<br></br>
                                 </p>
@@ -124,7 +125,7 @@ include 'ConexionBD.php';
                               </div>             
                           
                           <p class="p-container">
-    						<input type="submit" name="login" id="go" value="Enviar Solicitud"></input>
+    						<input type="submit" name="login" id="go" value="Enviar Solicitud" onclick="return confirm('Seguro que quiere enviar la información?')"></input>
   						  </p>							
                             </form>
                         </div>

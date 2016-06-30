@@ -13,13 +13,13 @@ include 'ConexionBD.php';
 
 require 'fpdf17/HtmlTable.php';
 
-$result=mysql_query("SELECT Id_Asignacion, Observaciones_Asignacion, Nombres_Usuario, Primer_Apellido_Usuario, Segundo_Apellido_Usuario, Fecha_Solicitud, Tipo_Mantenimiento, Sitio_Dano, Informacion_Solicitud, Nombres_Contratista, Primer_Apellido_Contratista, Segundo_Apellido_Contratista, Nombres_Administrativo, Primer_Apellido_Administrativo, Segundo_Apellido_Administrativo FROM asignacion, usuario, solicitud, contratista, administrativo WHERE asignacion.Usuario_Id_Usuario = usuario.Id_Usuario AND asignacion.Solicitud_Id_Solicitud = solicitud.Id_Solicitud AND asignacion.Contratista_Id_Contratista = contratista.Id_Contratista AND asignacion.Administrativo_Id_Administrativo = administrativo.Id_Administrativo", $link );
+$result=mysql_query("SELECT Id_Asignacion, Observaciones_Asignacion, Id_Usuario, Fecha_Solicitud, Tipo_Mantenimiento, Sitio_Dano, Informacion_Solicitud, Nombres_Contratista, Primer_Apellido_Contratista, Segundo_Apellido_Contratista, Nombres_Administrativo, Primer_Apellido_Administrativo, Segundo_Apellido_Administrativo FROM asignacion, solicitud, contratista, administrativo WHERE asignacion.Solicitud_Id_Solicitud = solicitud.Id_Solicitud AND asignacion.Contratista_Id_Contratista = contratista.Id_Contratista AND asignacion.Administrativo_Id_Administrativo = administrativo.Id_Administrativo", $link );
 
 $htmlTable='<table>
 <tr>
 <td>ID</td>
 <td>Observación de la asignación</td>
-<td>Usuario</td>
+<td>Id_Usuario</td>
 <td>Fecha De La Solicitud</td>
 <td>Tipo De Mantenimiento</td>
 <td>Sitio Del Daño</td>
