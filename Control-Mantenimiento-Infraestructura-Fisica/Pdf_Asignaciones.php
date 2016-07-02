@@ -32,13 +32,13 @@ while ($datos = mysql_fetch_array($result)){
 	$htmlTable .= "<tr>
 				<td>{$datos[0]}</td>
 				<td>{$datos[1]}</td>
-				<td>{$datos[2]} {$datos[3]} {$datos[4]}</td>
+				<td>{$datos[2]}</td>
+				<td>{$datos[3]}</td>
+				<td>{$datos[4]}</td>
 				<td>{$datos[5]}</td>
 				<td>{$datos[6]}</td>
-				<td>{$datos[7]}</td>
-				<td>{$datos[8]}</td>
-				<td>{$datos[9]} {$datos[10]} {$datos[11]}</td>	
-				<td>{$datos[12]} {$datos[13]} {$datos[14]}</td>		
+				<td>{$datos[7]} {$datos[8]} {$datos[9]}</td>	
+				<td>{$datos[10]} {$datos[11]} {$datos[12]}</td>		
 				</tr>
 ";
 }

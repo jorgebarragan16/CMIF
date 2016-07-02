@@ -67,7 +67,7 @@ include 'ConexionBD.php';
 						
 						<?php 
 						$Id = $_SESSION['Id_Contratista'];
-						$result = mysql_query("SELECT Id_Asignacion, Fecha_Solicitud, Tipo_Mantenimiento, Sitio_Dano, Informacion_Solicitud, Observaciones_Asignacion, Nombres_Usuario, Primer_Apellido_Usuario, Segundo_Apellido_Usuario, Nombres_Contratista, Primer_Apellido_Contratista, Segundo_Apellido_Contratista, Nombres_Administrativo, Primer_Apellido_Administrativo, Segundo_Apellido_Administrativo FROM asignacion, usuario, solicitud, contratista, administrativo WHERE asignacion.Usuario_Id_Usuario = usuario.Id_Usuario AND asignacion.Solicitud_Id_Solicitud = solicitud.Id_Solicitud AND asignacion.Contratista_Id_Contratista = contratista.Id_Contratista AND asignacion.Administrativo_Id_Administrativo = administrativo.Id_Administrativo AND asignacion.Contratista_Id_Contratista = $Id AND Id_Asignacion NOT IN (SELECT Asignacion_Id_Asignacion FROM `seguimiento`)", $link );
+						$result = mysql_query("SELECT Id_Asignacion, Fecha_Solicitud, Tipo_Mantenimiento, Sitio_Dano, Informacion_Solicitud, Observaciones_Asignacion, Id_Usuario, Nombres_Contratista, Primer_Apellido_Contratista, Segundo_Apellido_Contratista, Nombres_Administrativo, Primer_Apellido_Administrativo, Segundo_Apellido_Administrativo FROM asignacion, solicitud, contratista, administrativo WHERE Id_Usuario = solicitud.Id_Usuario AND asignacion.Solicitud_Id_Solicitud = solicitud.Id_Solicitud AND asignacion.Contratista_Id_Contratista = contratista.Id_Contratista AND asignacion.Administrativo_Id_Administrativo = administrativo.Id_Administrativo AND asignacion.Contratista_Id_Contratista = $Id AND Id_Asignacion NOT IN (SELECT Asignacion_Id_Asignacion FROM `seguimiento`)", $link );
 						
 						echo "<table border='3'>
 							<tr>
@@ -81,7 +81,7 @@ include 'ConexionBD.php';
 							<td>Sitio Del Daño</td>
 							<td>Información De La Solicitud</td>
 							<td>Observación de la asignación</td>
-							<td>Usuario</td>
+							<td>Id Usuario</td>
 							<td>Nombre Del Operario</td>
 							<td>Nombre Del Administrativo</td>
 						</tr>";
@@ -96,9 +96,9 @@ include 'ConexionBD.php';
 						echo "<td>$row[3]</td>";
 						echo "<td>$row[4]</td>";
 						echo "<td>$row[5]</td>";
-						echo "<td>$row[6] $row[7] $row[8] </td>";
-						echo "<td>$row[9] $row[10] $row[11] </td>";
-						echo "<td>$row[12] $row[13] $row[14] </td>";
+						echo "<td>$row[6]</td>";
+						echo "<td>$row[7] $row[8] $row[9] </td>";
+						echo "<td>$row[10] $row[11] $row[12] </td>";
 					}
 					echo "</table>";
 					?>

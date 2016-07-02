@@ -37,7 +37,7 @@ $especialidad_c = $_POST['Especialidad_Contratista'];
 
 
 //0btiene la longitud de un string
-$req = (strlen($nombre_c)*strlen($p_apellido_c)*strlen($s_apellido_c)*strlen($tipo_doc_c)*strlen($numero_doc_c)*strlen($cel_c)*strlen($email_c)*strlen($nick_c)*strlen($passw_c)*strlen($especialidad_c)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Registro_Contratista.php"</script>');
+$req = (strlen($nombre_c)*strlen($p_apellido_c)*strlen($s_apellido_c)*strlen($tipo_doc_c)*strlen($numero_doc_c)*strlen($cel_c)*strlen($email_c)*strlen($nick_c)*strlen($passw_c)*strlen($especialidad_c)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Registro_Contratistas.php"</script>');
 
 //Ingresamos la info a la base de datos
 $consulta="SELECT * FROM contratista WHERE CC_Contratista= ".$numero_doc_c;
@@ -49,7 +49,7 @@ if (mysql_num_rows($resultado)>0)
 	}
 	else
 	{
-		mysql_query("INSERT INTO contratista VALUES ('','$nombre_c','$p_apellido_c','$s_apellido_c','$tipo_doc_c','$numero_doc_c','$cel_c','$email_c','$nick_c','$passw_c','$especialidad_c',1,0)",$link) or die('"<script> alert("ERROR!! Vuelva a intentar")</script>" "<script> window.location="Registro_Contratista.php"</script>');
+		mysql_query("INSERT INTO contratista VALUES ('','$nombre_c','$p_apellido_c','$s_apellido_c','$tipo_doc_c','$numero_doc_c','$cel_c','$email_c','$nick_c','$passw_c','$especialidad_c',1,0)",$link) or die('"<script> alert("ERROR!! Vuelva a intentar")</script>" "<script> window.location="Registro_Contratistas.php"</script>');
 		echo '<script> alert("Se ha registrado a un nuevo operario u contratista con éxtio");</script>';
 		echo '<script> window.location="Menu_Contratistas.php"; </script>';
 	} 

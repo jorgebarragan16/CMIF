@@ -1,6 +1,8 @@
 <?php
 //aca los parametros de conexion, si tienes aparte la conexión , solo incluyuela
-mysql_connect("192.168.11.34", "cmif", "deb186f8db36d53252d651c1a0fbb98d");
+$host = "192.168.11.34";
+$usuario = "cmif";
+$passwd ="deb186f8db36d53252d651c1a0fbb98d";
 $bd="control_mantenimiento";
 $nombre="Copia-Seguridad.sql"; //Este es el nombre del archivo a generar
 /* Determina si la tabla será vaciada (si existe) cuando  restauremos la tabla. */            

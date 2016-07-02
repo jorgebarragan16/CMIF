@@ -7,7 +7,7 @@
 <meta http-equiv="expires" content="0"></meta>
 <link rel="shortcut icon" href="http://ryca.itfip.edu.co/RYCAWeb/public/img/logo.png"></link>
 
-<title>Control Del Mantenimiento De La Infraestructura FÃ­sica Del ITFIP</title>
+<title>Control Del Mantenimiento De La Infraestructura Física Del ITFIP</title>
 
 <link rel="stylesheet" type="text/css" href="./Control_Mantenimiento_Infraestructura_files/Estilo_Pagina.css"></link>
 <link rel="stylesheet" type="text/css" href="./Control_Mantenimiento_Infraestructura_files/Estilo_Miga.css"></link>

@@ -26,6 +26,15 @@ include 'ConexionBD.php';
 <link rel="stylesheet" type="text/css" href="./Control_Mantenimiento_Infraestructura_files/demo.css"></link>
 <link rel="stylesheet" type="text/css" href="./Control_Mantenimiento_Infraestructura_files/Estilo_Formularios.css"></link>
 <script src="./Control_Mantenimiento_Infraestructura_files/JavaScripts/Mayuscula.js"></script>
+
+<script>
+function justNumbers(e) {
+	var keynum = window.event ? window.event.keyCode : e.which;
+	if ( keynum == 8 ) return true;
+	return /\d/.test(String.fromCharCode(keynum));
+	}
+
+</script>
 </head>
 
 <body style="background-image: url(./Control_Mantenimiento_Infraestructura_files/Img/Fondo.png);">
@@ -107,12 +116,12 @@ include 'ConexionBD.php';
 				  				
 				  				<p> 
                                      <label for="Num-Documento">Numero de Documento</label>
-                                  	 <input name="CC_Contratista" required="required" type="text" placeholder="Ingrese el numero de documento" maxlength="30"></input>
+                                  	 <input name="CC_Contratista" required="required" type="text" placeholder="Ingrese el numero de documento" maxlength="10" onkeypress="return justNumbers(event);"></input>
                                 </p>
                                 
                                 <p> 
                                     <label for="Num-Documento">Numero de Celular</label>
-                                    <input name="Cel_Contratista" required="required" type="text" placeholder="Ingrese el numero de celular" maxlength="30"></input>
+                                    <input name="Cel_Contratista" required="required" type="text" placeholder="Ingrese el numero de celular" maxlength="10"onkeypress="return justNumbers(event);"></input>
                                 </p>
                                 
                                 <p> 

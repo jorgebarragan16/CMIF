@@ -43,11 +43,9 @@ $contratista = $_POST['Contratista'];
 //0btiene la longitud de un string
 $req = (strlen($observaciones)*strlen($solicitud)*strlen($contratista)) or die('"<script> alert("Digite TODOS los campos")</script>" "<script> window.location="Asignaciones_De_Trabajo.php"</script>');
 
-$data = mysql_query("SELECT Id_Usuario FROM solicitud  WHERE Id_Solicitud = $solicitud LIMIT 1", $link);
-$result = mysql_fetch_object($data);
 //Ingresamos la info a la base de datos
 
-mysql_query("INSERT INTO asignacion VALUES ('','$observaciones',{$result->Id_Usuario}, '$solicitud','$contratista',1)",$link) or die('"<script> alert("'.mysql_error().'")</script>" "<script> window.location="Realizar_Asignacion.php"</script>');
+mysql_query("INSERT INTO asignacion VALUES ('','$observaciones', '$solicitud','$contratista',1)",$link) or die('"<script> alert("'.mysql_error().'")</script>" "<script> window.location="Asignaciones_De_Trabajo.php"</script>');
 
 echo '<script> alert("Se ha asignado el trabajo con éxito");</script>';
 echo '<script> window.location="Asignaciones_De_Trabajo.php"; </script>';
